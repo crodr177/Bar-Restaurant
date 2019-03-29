@@ -104,8 +104,59 @@ body {
 }
 
 
-  /* online blog
+/* -- blog section -- */
+#blog {
+  width: 1200px;
+  margin:auto;
+}  
+#blog img {
+  width: 1200px;
+}
+.blog-description{
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+.blog-description h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.blog-description p {
+  color: #888;
+}
+.time-stamp {
+  text-transform: uppercase;
+  color: #999;
+  font-weight: bold;
+  font-size: 12px;
+}
+.time-stamp i {
+  font-size:12px;
+  padding: 0 6px;
+}
+.time-stamp a {
+  color: #666;
+  text-decoration: none;
+}
+.time-stamp i:first-child:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+/* -- google map section -- */
+
+#google-map {
+  margin-top: 40px;
+}
+
+#google-map iframe {
+    position: absolute;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+  /* online blog
   history, reservations, menu 
 
 
@@ -115,4 +166,4 @@ body {
 
   reivew tab 
 
-  map  */
+  */
