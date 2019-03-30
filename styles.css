@@ -208,15 +208,106 @@ body {
   font-size: 20px;
 }
 
-  /* online blog
+/* -- blog section -- */
+#blog {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+}  
+#blog img {
+  width: 400px;
+  display: flex;
+  margin: 40px auto;
+}
+.blog {
+  text-align: center;
+}
+.blog-description{
+  margin-bottom: 10px;
+  padding: 0 40px;
+}
+.blog-description h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #333;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+.blog-description p {
+  color: #888;
+}
+.time-stamp {
+  text-transform: uppercase;
+  color: #999;
+  font-weight: bold;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+.time-stamp i {
+  font-size:12px;
+  padding: 0 6px;
+}
+.time-stamp a {
+  color: #666;
+  text-decoration: none;
+}
+.time-stamp i:first-child:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  history, reservations, menu 
+/* -- google map section -- */
+
+#google-map {
+  margin-top: 40px;
+}
+
+#google-map iframe {
+    position: relative;
+    left: 0;
+    width: 100% !important;
+    height: 600px !important;
+}
 
 
+/* -- footer section -- */
+
+  #footer ul{
+    display: flex;
+    margin: 35px;
+    justify-content: space-between;
+  }
+
+  #footer ul div {
+    flex-flow: row wrap;
+    width:200px;
+    height:200px;
+  }
+
+  #footer ul li {
+    list-style: none;
+  }
+
+/* -- history, reservations, menu -- */
+  .history-content {
+    display: flex;
+    padding: 30px;
+  }
+
+  .history-content div {
+    padding: 10px;
+  }
+
+.intro {
+  width: 45%;
+}
+
+    /*
   daily special 
 
   pictures of food 
 
   reivew tab 
 
-  map  */
+  */
