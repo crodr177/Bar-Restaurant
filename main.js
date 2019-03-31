@@ -1,4 +1,4 @@
-(function () {
+
 var dailySpecial = document.querySelector("#daily-special");
 var foodMenu = document.querySelector(".content");
 
@@ -48,18 +48,51 @@ $.ajax({
      <div class="row-name-price">
         <p>${item.entree.name}</p>
         <p>.....................................</p>
-        <p>$${item.entree.price}</p>
+        <p class="price-color">$${item.entree.price}</p>
         </div>
-        <p>${item.entree.description}</p>
+        <p class="desc">${item.entree.description}</p>
      </div>
     `;
   }).join('');
+
+  var app = data.appetizers.map(function(item) {
+    return `
+     <div class="row-name-price">
+        <p>${item.name}</p>
+        <p>.....................................</p>
+        <p class="price-color">$${item.price}</p>
+        </div>
+        <p class="desc">${item.description}</p>
+     </div>
+    `;
+  }).join('');
+
+  var dessert = data.desserts.map(function(item) {
+    return `
+     <div class="row-name-price">
+        <p>${item.name}</p>
+        <p>.....................................</p>
+        <p class="price-color">$${item.price}</p>
+        </div>
+        <p class="desc">${item.description}</p>
+     </div>
+    `;
+  }).join('');
+
+  var food = `<h3 style="font-family: 'Fira Sans', sans-serif; font-size: 30px; color: #FBCB81;">Appetizers</h3>` + app + `<h3 style="font-family: 'Fira Sans', sans-serif; font-size: 30px; color: #FBCB81;">Entrees</h3>` + menu + `<h3 style="font-family: 'Fira Sans', sans-serif; font-size: 30px; color: #FBCB81;">Desserts</h3>` + dessert;
 
   var item = Math.floor(Math.random() * items.length)
   var randomItem = items[item]
 
   dailySpecial.innerHTML = randomItem;
   foodMenu.innerHTML = menu;
+  foodMenu.innerHTML = food;
+
+  $("#accordion").on("click", ".acc-header", function () {
+    $(".slidein").removeClass("slideout")
+    $(this).find("+ .slidein").addClass("slideout")
+  })
+
 })
 
 var disqus_developer = 1;
@@ -76,5 +109,3 @@ var disqus_url = '{{ site.url }}{{ page.url }}';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
   })();
-
-})();
