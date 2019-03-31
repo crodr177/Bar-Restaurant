@@ -1,5 +1,7 @@
+(function () {
 var dailySpecial = document.querySelector("#daily-special");
 var foodMenu = document.querySelector(".content");
+
 
 $.ajax({
   method: "get",
@@ -59,3 +61,20 @@ $.ajax({
   dailySpecial.innerHTML = randomItem;
   foodMenu.innerHTML = menu;
 })
+
+var disqus_developer = 1;
+var disqus_url = '{{ site.url }}{{ page.url }}';
+
+  var disqus_config = function () {
+    this.page.url = 'mainstreetpub.disqus.com';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'PAGE_IDENTIFIER'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mainstreetpub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+})();

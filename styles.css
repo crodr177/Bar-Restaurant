@@ -256,7 +256,12 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
+/* -- reviews section -- */
+  #disqus {
+  padding: 40px;
+}
+  #disqus h3 {
+}
 /* -- google map section -- */
 
 #google-map {
@@ -273,9 +278,16 @@ body {
 
 /* -- footer section -- */
 
+  #footer {
+    background: #333;
+    color: #fff;
+    height: 340px;
+    padding: 20px 0;
+  }
+
   #footer ul{
     display: flex;
-    margin: 35px;
+    margin: 55px;
     justify-content: space-between;
   }
 
@@ -287,6 +299,24 @@ body {
 
   #footer ul li {
     list-style: none;
+    margin: 10px 0;
+  }
+
+  #footer h2 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .main h2 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+  #footer a {
+    color: #eee;
+    text-decoration: none;
+  }
+  #footer a:hover {
+    color: #ddd;
+    text-decoration: underline;
   }
 
 /* -- history, reservations, menu -- */
@@ -303,6 +333,10 @@ body {
   width: 45%;
 }
 
+/* -- review tab -- */
+  .disqus_thread {
+  padding: 40px;
+}
     /*
   daily special 
 
