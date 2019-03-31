@@ -43,17 +43,33 @@ $.ajax({
   `;
   });
 
-  var menu = newArr.map(function(item) {
+  var menu = data.entrees.map(function(item) {
     return `
      <div class="row-name-price">
-        <p>${item.entree.name}</p>
+        <p>${item.name}</p>
         <p>.....................................</p>
-        <p class="price-color">$${item.entree.price}</p>
-        </div>
-        <p class="desc">${item.entree.description}</p>
-     </div>
+        <p class="price-color">$${item.price}</p>
+      </div>
+        <p class="desc">${item.description}</p>
+        <div class="icons">
+        ${!(item.extra.spicy) ? '<p class="spicy"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
+        ${!(item.extra.glutenfree) ? '<p class="glutenfree"></p>' : '<i class="fas fa-bread-slice fa-1x"></i>'}         
+        ${!(item.extra.vegetarian) ? '<p class="vegetarian></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
+       </div>
     `;
   }).join('');
+
+  // var menu = newArr.map(function(item) {
+  //   return `
+  //    <div class="row-name-price">
+  //       <p>${item.entree.name}</p>
+  //       <p>.....................................</p>
+  //       <p class="price-color">$${item.entree.price}</p>
+  //       </div>
+  //       <p class="desc">${item.entree.description}</p>
+  //    </div>
+  //   `;
+  // }).join('');
 
   var app = data.appetizers.map(function(item) {
     return `
@@ -63,7 +79,11 @@ $.ajax({
         <p class="price-color">$${item.price}</p>
         </div>
         <p class="desc">${item.description}</p>
-     </div>
+        <div class="icons">
+        ${!(item.extra.spicy) ? '<p class="spicy"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
+        ${!(item.extra.glutenfree) ? '<p class="glutenfree"></p>' : '<i class="fas fa-bread-slice fa-1x"></i>'}         
+        ${!(item.extra.vegetarian) ? '<p class="vegetarian></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
+        </div>
     `;
   }).join('');
 
@@ -75,7 +95,10 @@ $.ajax({
         <p class="price-color">$${item.price}</p>
         </div>
         <p class="desc">${item.description}</p>
-     </div>
+        <div class="icons">
+        ${!(item.extra.spicy) ? '<p class="spicy"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
+        ${!(item.extra.glutenfree) ? '<p class="glutenfree"></p>' : '<i class="fas fa-bread-slice fa-1x"></i>'}         
+        ${!(item.extra.vegetarian) ? '<p class="vegetarian></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
     `;
   }).join('');
 
@@ -85,7 +108,6 @@ $.ajax({
   var randomItem = items[item]
 
   dailySpecial.innerHTML = randomItem;
-  foodMenu.innerHTML = menu;
   foodMenu.innerHTML = food;
 
   $("#accordion").on("click", ".acc-header", function () {
