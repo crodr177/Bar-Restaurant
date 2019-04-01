@@ -52,24 +52,13 @@ $.ajax({
       </div>
         <p class="desc">${item.description}</p>
         <div class="icons">
-        ${!(item.extra.spicy) ? '<p class="spicy"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
-        ${!(item.extra.glutenfree) ? '<p class="glutenfree"></p>' : '<i class="fas fa-bread-slice fa-1x"></i>'}         
-        ${!(item.extra.vegetarian) ? '<p class="vegetarian></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
-       </div>
+        ${!(item.extra.spicy) ? '<p class="spicy" style="display:inline;"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
+        ${!(item.extra.glutenfree) ? '<p class="glutenfree" style="display:inline;"></p>' : '<i class="fab fa-pagelines fa-1x"></i>'}         
+        ${!(item.extra.vegetarian) ? '<p class="vegetarian style="display:inline;"></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
+        </div>
+      
     `;
   }).join('');
-
-  // var menu = newArr.map(function(item) {
-  //   return `
-  //    <div class="row-name-price">
-  //       <p>${item.entree.name}</p>
-  //       <p>.....................................</p>
-  //       <p class="price-color">$${item.entree.price}</p>
-  //       </div>
-  //       <p class="desc">${item.entree.description}</p>
-  //    </div>
-  //   `;
-  // }).join('');
 
   var app = data.appetizers.map(function(item) {
     return `
@@ -80,10 +69,11 @@ $.ajax({
         </div>
         <p class="desc">${item.description}</p>
         <div class="icons">
-        ${!(item.extra.spicy) ? '<p class="spicy"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
-        ${!(item.extra.glutenfree) ? '<p class="glutenfree"></p>' : '<i class="fas fa-bread-slice fa-1x"></i>'}         
-        ${!(item.extra.vegetarian) ? '<p class="vegetarian></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
+        ${!(item.extra.spicy) ? '<p class="spicy" style="display:inline;"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
+        ${!(item.extra.glutenfree) ? '<p class="glutenfree" style="display:inline;"></p>' : '<i class="fab fa-pagelines fa-1x"></i>'}         
+        ${!(item.extra.vegetarian) ? '<p class="vegetarian style="display:inline;"></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
         </div>
+       
     `;
   }).join('');
 
@@ -96,9 +86,10 @@ $.ajax({
         </div>
         <p class="desc">${item.description}</p>
         <div class="icons">
-        ${!(item.extra.spicy) ? '<p class="spicy"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
-        ${!(item.extra.glutenfree) ? '<p class="glutenfree"></p>' : '<i class="fas fa-bread-slice fa-1x"></i>'}         
-        ${!(item.extra.vegetarian) ? '<p class="vegetarian></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
+        ${!(item.extra.spicy) ? '<p class="spicy" style="display:inline;"></p>' : '<i class="fas fa-pepper-hot fa-1x"></i>'}         
+        ${!(item.extra.glutenfree) ? '<p class="glutenfree" style="display:inline;"></p>' : '<i class="fab fa-pagelines fa-1x"></i>'}         
+        ${!(item.extra.vegetarian) ? '<p class="vegetarian style="display:inline;"></p>' : '<i class="fas fa-leaf fa-1x"></i>'}
+        </div>
     `;
   }).join('');
 
@@ -117,17 +108,3 @@ $.ajax({
 
 })
 
-var disqus_developer = 1;
-var disqus_url = '{{ site.url }}{{ page.url }}';
-
-  var disqus_config = function () {
-    this.page.url = 'mainstreetpub.disqus.com';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'PAGE_IDENTIFIER'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-
-  (function () { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://mainstreetpub.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();

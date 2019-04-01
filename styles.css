@@ -112,7 +112,6 @@ body {
 #food-menu {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
 }
 
 #accordion p {
@@ -181,7 +180,7 @@ body {
 }
 
 .content p {
-  /* padding-top: 15px; */
+  padding-top: 5px;
   margin-bottom: 0;
 }
 
@@ -189,9 +188,14 @@ body {
   color: rgb(178, 136, 78);
 }
 
-.icons i {
+.icons {
   display: flex;
   flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.icons i {
+  margin-right: 5px;
 }
 
 /* accordion: history */
@@ -357,7 +361,7 @@ body {
   width: 100%;
   margin: 30px auto;
   display: flex;
-  background-color: rgb(178, 136, 78);
+  background-color: rgb(207, 160, 93);
   margin:0;
   padding-bottom: 20px;
   font-family: 'Fira Sans', sans-serif;
@@ -405,11 +409,223 @@ body {
   cursor: pointer;
 }
 /* -- reviews section -- */
-  #disqus {
-  padding: 40px;
-}
-  #disqus h3 {
-}
+  #review-container {
+    display:flex;
+    flex-direction: row;
+  }
+  #reviews {
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 20px 50px 20px 50px;
+    background: #fceabb;
+    width: 50%;
+  }
+
+  .review-top {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(156, 156, 156);
+    margin-bottom: 10px;
+  }
+
+  .review-top p:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .login i {
+    margin-right: 5px;
+  }
+
+  .section-2 {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .rec-share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .rec-share p {
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+
+  .rec-share i:hover {
+    color: white;
+  }
+
+  .sort {
+    margin-right: 10px;
+  }
+
+  .section-2 p:hover {
+    text-decoration: underline;
+  }
+
+  .input-comment {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .textarea {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textarea textarea {
+    width: 500px;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    outline: 0;
+    margin-bottom: -1px;
+    border: 1px solid rgba(206, 205, 205, 0.986);
+  }
+
+  .textarea textarea::placeholder {
+    font-size: 14px;
+  }
+
+ .textarea button {
+   margin: 0;
+   height: 30px;
+   background: rgb(250, 249, 249);
+   border: 1px solid rgba(206, 205, 205, 0.986);
+ }
+
+ .textarea textarea:hover {
+  border: 2px solid black;
+ }
+
+
+ .section-4 {
+   display:flex;
+   flex-direction: row;
+   width: 600px;
+   margin-left: 100px;
+   margin-bottom: 40px;
+ }
+
+ .social-media-login {
+   margin-right: 50px;
+ }
+
+ .name-disqus input {
+  width: 355px;
+  height: 30px;
+  padding: 10px;
+  outline: 0;
+ }
+
+ .name-disqus input:hover {
+   border: 2px solid black;
+ }
+
+ .social-media-icons i:nth-child(1):hover {
+  color: rgb(28, 28, 224);
+  cursor: pointer;
+ }
+
+ .social-media-icons i:nth-child(2):hover {
+  color: rgb(30, 164, 209);
+  cursor: pointer;
+ }
+
+ .social-media-icons i:nth-child(3):hover {
+  color: red;
+  cursor: pointer;
+ }
+
+ .comments-section {
+  display:flex;
+  flex-direction: row;
+  width: 600px;
+  justify-content: space-between;
+ }
+
+ .comments-section i {
+   margin-right: 30px;
+ }
+
+ .user-comment {
+  display:flex;
+  flex-direction: column;
+ }
+
+ .username-time {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+ }
+
+ .username {
+  color: blue;
+  cursor: pointer;
+ }
+
+ .username:hover {
+   color:black;
+ }
+
+ .username-time .time {
+   margin-top: 15px;
+   margin-left: 11px;
+   font-size: 10px;
+ }
+
+ .comment-para {
+  padding-right: 40px;
+  margin-top: 1px;
+  margin-bottom: -3px;
+ }
+
+ .bottom-comment {
+   display: flex;
+   flex-direction: row;
+   font-size: 11px;
+ }
+
+ .bottom-comment p:nth-child(1) {
+   margin-right: 10px;
+ }
+
+ .bottom-comment p:hover {
+   color: blue;
+   cursor: pointer;
+ }
+
+ .reviews-title {
+   width:50%;
+   padding: 100px 200px 100px 200px;
+  background: linear-gradient(to right, #bb8a03, #fceabb);
+ }
+
+ .reviews-title h1 {
+   font-size: 60px;
+   color: white;
+   font-family: 'Fira Sans', sans-serif;
+ }
 
 /* pictures */
 
