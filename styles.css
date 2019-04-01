@@ -629,21 +629,21 @@ body {
  }
 
 /* pictures */
-
 #food-imgs {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+   display: flex; 
+   flex-direction: row; 
+   width: 100%; 
   height: 300px;
 }
 
 #food-imgs img {
-  width: 25%;
-  height: 300px;
+   height: 300px;
 }
 
 #food-imgs img:hover {
-  border: 5px solid #FBCB81;
+  opacity: 0.7;
+  cursor: pointer;
+  border: 2px solid orange;
 }
 
 /* -- google map section -- */
@@ -1032,4 +1032,63 @@ html, body {
         flex-direction: column;
       }
 
+}
+
+
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+/* slider animation */
+.slider {
+  height: 100px;
+  position: relative;
+  width: 100%;
+	margin: auto;
+  overflow:hidden;
+  background: rgb(250, 249, 238);
+}
+.slider::before, .slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
 }

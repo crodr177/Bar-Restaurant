@@ -25,7 +25,7 @@ $.ajax({
   })
   }
 
-  console.log(newArr);
+
 
 
   var items = newArr.map(function(item) {
